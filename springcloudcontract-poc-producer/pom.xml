@@ -79,13 +79,14 @@
 				<artifactId>spring-cloud-contract-maven-plugin</artifactId>
 				<extensions>true</extensions>
 				<configuration>
-					<!--<baseClassForTests>hello.BaseClass</baseClassForTests>-->
-					<baseClassMappings>
-						<baseClassMapping>
-							<contractPackageRegex>.*hello</contractPackageRegex>
-							<baseClassFQN>hello.BaseClass</baseClassFQN>
-						</baseClassMapping>
-					</baseClassMappings>
+					<baseClassForTests>hello.BaseClass</baseClassForTests>
+					<!-- Add More Detailed Base Class Mappings -->
+					<!--<baseClassMappings>-->
+						<!--<baseClassMapping>-->
+							<!--<contractPackageRegex>.*hello</contractPackageRegex>-->
+							<!--<baseClassFQN>hello.BaseClass</baseClassFQN>-->
+						<!--</baseClassMapping>-->
+					<!--</baseClassMappings>-->
 				</configuration>
 			</plugin>
 		</plugins>
