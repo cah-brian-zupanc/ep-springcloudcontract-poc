@@ -13,8 +13,8 @@ class PersonService {
         public PersonService() {
                 personMap = new HashMap<>();
                 personMap.put(1L, new Person(1L, "Daniel", "Adams"));
-                personMap.put(2L, new Person(2L, "Halter", "Thomas"));
-                personMap.put(3L, new Person(3L, "Dobransky", "Tim"));
+                personMap.put(2L, new Person(2L, "Thomas", "Halter"));
+                personMap.put(3L, new Person(3L, "Tim", "Dobransky"));
         }
 
         Person findPersonById(Long id) {

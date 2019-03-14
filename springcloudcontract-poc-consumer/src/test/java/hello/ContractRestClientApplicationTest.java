@@ -14,6 +14,8 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 @AutoConfigureStubRunner(ids="com.example:springcloudcontract-poc-producer:+:stubs:8100",
                          stubsMode= StubsMode.LOCAL)
+//Configure Nexus
+//
 //@AutoConfigureStubRunner(ids="com.example:springcloudcontract-poc-producer:+:stubs:8100",
 //                        repositoryRoot="https://nexus.cardinalhealth.net/repository/",
 //                        stubsMode= StubsMode.REMOTE)
