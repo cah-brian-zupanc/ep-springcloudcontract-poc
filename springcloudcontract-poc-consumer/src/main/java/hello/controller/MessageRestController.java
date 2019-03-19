@@ -1,5 +1,6 @@
-package hello;
+package hello.controller;
 
+import hello.model.Person;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

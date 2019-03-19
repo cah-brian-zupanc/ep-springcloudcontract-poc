@@ -1,5 +1,8 @@
 package hello;
 
+import hello.controller.PersonRestController;
+import hello.model.Person;
+import hello.service.PersonService;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -14,9 +17,11 @@ import io.restassured.module.mockmvc.RestAssuredMockMvc;
 @SpringBootTest(classes = SpringcloudcontractPocProducerApplication.class)
 public abstract class BaseClass {
 
-        @Autowired PersonRestController personRestController;
+        @Autowired
+        PersonRestController personRestController;
 
-        @MockBean PersonService personService;
+        @MockBean
+        PersonService personService;
 
         @Before public void setup() {
                 RestAssuredMockMvc.standaloneSetup(personRestController);

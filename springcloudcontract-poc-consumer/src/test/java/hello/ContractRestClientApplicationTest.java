@@ -1,5 +1,6 @@
 package hello;
 
+import hello.model.Person;
 import org.assertj.core.api.BDDAssertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;

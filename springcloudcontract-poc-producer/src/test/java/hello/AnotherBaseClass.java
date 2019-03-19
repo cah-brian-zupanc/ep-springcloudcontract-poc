@@ -1,5 +1,8 @@
 package hello;
 
+import hello.controller.PersonRestController;
+import hello.model.Person;
+import hello.service.PersonService;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.Before;
 import org.junit.runner.RunWith;
@@ -13,9 +16,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = SpringcloudcontractPocProducerApplication.class)
 public abstract class AnotherBaseClass {
 
-        @Autowired PersonRestController personRestController;
+        @Autowired
+        PersonRestController personRestController;
 
-        @MockBean PersonService personService;
+        @MockBean
+        PersonService personService;
 
         @Before public void setup() {
                 RestAssuredMockMvc.standaloneSetup(personRestController);

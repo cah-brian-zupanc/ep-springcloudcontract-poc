@@ -1,12 +1,13 @@
-package hello;
+package hello.service;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import hello.model.Person;
 import org.springframework.stereotype.Service;
 
 @Service
-class PersonService {
+public class PersonService {
 
         private final Map<Long, Person> personMap;
 
@@ -17,7 +18,7 @@ class PersonService {
                 personMap.put(3L, new Person(3L, "Tim", "Dobransky"));
         }
 
-        Person findPersonById(Long id) {
+        public Person findPersonById(Long id) {
                 return personMap.get(id);
         }
 }

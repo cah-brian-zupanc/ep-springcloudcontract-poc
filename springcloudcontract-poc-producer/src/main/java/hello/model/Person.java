@@ -1,4 +1,4 @@
-package hello;
+package hello.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Person
 {
-    private long id;
+    private Long id;
     private String firstName;
     private String lastName;
 }
