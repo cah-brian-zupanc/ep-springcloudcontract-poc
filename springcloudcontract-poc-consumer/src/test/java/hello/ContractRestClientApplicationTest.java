@@ -15,15 +15,15 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
-@AutoConfigureStubRunner(ids="com.example:springcloudcontract-poc-producer:+:stubs:8100",
-                         stubsMode= StubsMode.LOCAL)
+//@RunWith(SpringRunner.class)
+//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
+//@AutoConfigureStubRunner(ids="com.example:springcloudcontract-poc-producer:+:stubs:8100",
+//                         stubsMode= StubsMode.LOCAL)
 //Configure Nexus
 //
-//@AutoConfigureStubRunner(ids="com.example:springcloudcontract-poc-producer:+:stubs:8100",
-//                        repositoryRoot="https://nexus.cardinalhealth.net/repository/",
-//                        stubsMode= StubsMode.REMOTE)
+@AutoConfigureStubRunner(ids="com.example:springcloudcontract-poc-producer:+:stubs:8100",
+                        repositoryRoot="https://nexus.cardinalhealth.net/repository/",
+                        stubsMode= StubsMode.REMOTE)
 public class ContractRestClientApplicationTest {
 
         @Test
