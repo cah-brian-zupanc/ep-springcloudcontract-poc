@@ -68,7 +68,7 @@ public class ContractRestClientApplicationTest {
 
                 // when:
                 ResponseEntity<List<Person>> personsResponseEntity = restTemplate.exchange(
-                        "http://localhost:8080/persons/male",
+                        "http://localhost:8100/persons/male",
                         HttpMethod.GET,
                         null,
                         new ParameterizedTypeReference<List<Person>>(){});
