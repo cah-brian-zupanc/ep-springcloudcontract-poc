@@ -3,13 +3,9 @@
  */
 buildscript {
     repositories {
-        mavenLocal()
+        maven { url 'https://nexus.cardinalhealth.net/repository/maven/'}
         maven {
-            url = 'https://repo.spring.io/milestone'
-        }
-
-        maven {
-            url = 'http://repo.maven.apache.org/maven2'
+            url 'http://ldil0219apbld15:9081/nexus/content/repositories/CARES-Common'
         }
     }
     dependencies {
@@ -26,13 +22,9 @@ plugins {
 apply plugin: 'spring-cloud-contract'
 
 repositories {
-    mavenLocal()
+    maven { url 'https://nexus.cardinalhealth.net/repository/maven/'}
     maven {
-        url = 'https://repo.spring.io/milestone'
-    }
-
-    maven {
-        url = 'http://repo.maven.apache.org/maven2'
+        url 'http://ldil0219apbld15:9081/nexus/content/repositories/CARES-Common'
     }
 }
 
@@ -57,14 +49,6 @@ group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 description = 'springcloudcontract-poc-producer'
 sourceCompatibility = '1.8'
-
-publishing {
-    publications {
-        maven(MavenPublication) {
-            from(components.java)
-        }
-    }
-}
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
