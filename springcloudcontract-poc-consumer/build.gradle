@@ -3,13 +3,10 @@
  */
 buildscript {
     repositories {
-        mavenLocal()
-        maven {
-            url = 'https://repo.spring.io/milestone'
-        }
 
+        maven { url 'https://nexus.cardinalhealth.net/repository/maven/'}
         maven {
-            url = 'http://repo.maven.apache.org/maven2'
+            url 'http://ldil0219apbld15:9081/nexus/content/repositories/CARES-Common'
         }
     }
     dependencies {
@@ -26,13 +23,9 @@ plugins {
 apply plugin: 'spring-cloud-contract'
 
 repositories {
-    mavenLocal()
+    maven { url 'https://nexus.cardinalhealth.net/repository/maven/'}
     maven {
-        url = 'https://repo.spring.io/milestone'
-    }
-
-    maven {
-        url = 'http://repo.maven.apache.org/maven2'
+        url 'http://ldil0219apbld15:9081/nexus/content/repositories/CARES-Common'
     }
 }
 
