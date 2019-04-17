@@ -1,6 +1,8 @@
-package contracts.hello
+package hello
 
-org.springframework.cloud.contract.spec.Contract.make {
+import org.springframework.cloud.contract.spec.Contract
+
+Contract.make {
     
         // Ignore a Contract
         // ignored()

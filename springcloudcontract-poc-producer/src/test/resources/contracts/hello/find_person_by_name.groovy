@@ -1,4 +1,4 @@
-package contracts.hello
+package hello
 
 org.springframework.cloud.contract.spec.Contract.make {
     
