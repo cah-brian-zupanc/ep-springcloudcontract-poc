@@ -4,9 +4,6 @@
 buildscript {
     repositories {
         maven { url 'https://nexus.cardinalhealth.net/repository/maven/'}
-        maven {
-            url 'http://ldil0219apbld15:9081/nexus/content/repositories/CARES-Common'
-        }
     }
     dependencies {
         classpath "org.springframework.cloud:spring-cloud-contract-gradle-plugin:${sccVersion}"
@@ -23,9 +20,6 @@ apply plugin: 'spring-cloud-contract'
 
 repositories {
     maven { url 'https://nexus.cardinalhealth.net/repository/maven/'}
-    maven {
-        url 'http://ldil0219apbld15:9081/nexus/content/repositories/CARES-Common'
-    }
 }
 
 dependencies {
@@ -35,7 +29,6 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.6'
     runtime "com.h2database:h2:1.4.197"
     testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
-    testCompile "org.springframework.cloud:spring-cloud-starter-contract-stub-runner:${sccVersion}"
     testCompile "org.springframework.cloud:spring-cloud-starter-contract-verifier:${sccVersion}"
 }
 
@@ -57,3 +50,9 @@ tasks.withType(JavaCompile) {
 contracts {
     baseClassForTests = 'hello.BaseClass'
 }
+
+//jar {
+//    baseName = 'ep-logging'
+//    version = version
+//}
+
