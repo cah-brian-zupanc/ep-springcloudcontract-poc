@@ -13,6 +13,7 @@ buildscript {
 plugins {
     id 'java'
     id 'maven-publish'
+    id 'maven'
     id "io.spring.dependency-management" version "1.0.3.RELEASE"
 }
 
@@ -51,8 +52,14 @@ contracts {
     baseClassForTests = 'hello.BaseClass'
 }
 
-//jar {
-//    baseName = 'ep-logging'
-//    version = version
-//}
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId 'com.cardinalhealth.ep'
+            artifactId 'springcloudcontract'
+            version '0.0.3'
 
+            from components.java
+        }
+    }
+}
